@@ -9,8 +9,23 @@ export default function CreateProduct() {
   });
 
   return (
-    <Form>
-      <fieldset disabled>
+    <Form
+      onSubmit={(e) => {
+        e.preventDefault();
+        console.log(inputs);
+      }}
+    >
+      <fieldset>
+        <label htmlFor="image">
+          Image
+          <input
+            type="file"
+            id="image"
+            name="image"
+            onChange={handleChange}
+            required
+          />
+        </label>
         <label htmlFor="name">
           Name
           <input
@@ -30,6 +45,16 @@ export default function CreateProduct() {
             name="price"
             placeholder="price"
             value={inputs.price}
+            onChange={handleChange}
+          />
+        </label>
+        <label htmlFor="description">
+          Description
+          <textarea
+            id="description"
+            name="description"
+            placeholder="Description"
+            value={inputs.description}
             onChange={handleChange}
           />
         </label>

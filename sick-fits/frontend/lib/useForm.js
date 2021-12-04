@@ -10,7 +10,9 @@ export default function useForm(initial = {}) {
     }
 
     if (type === 'file') {
-      value[0] = e.target.files;
+      // eslint-disable-next-line prefer-destructuring
+      value = e.target.files[0];
+      //   [value] = e.target.files;
     }
 
     setInputs({
