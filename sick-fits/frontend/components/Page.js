@@ -38,7 +38,7 @@ const GlobalStyles = createGlobalStyle`
   }
   *, *:before, *:after {
     box-sizing: inherit;
-    margin: 0 auto;
+    ${'' /* margin: 0 auto; */}
     padding: 2rem;
   }
 `;
@@ -46,7 +46,7 @@ const GlobalStyles = createGlobalStyle`
 const InnerStyles = styled.div`
   max-width: var(--maxWidth);
   margin: 1px;
-  /* padding: 1px; */
+  padding: 1px;
 `;
 
 export default function Page({ children }) {
