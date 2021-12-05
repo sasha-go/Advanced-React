@@ -38,7 +38,7 @@ const GlobalStyles = createGlobalStyle`
   }
   *, *:before, *:after {
     box-sizing: inherit;
-    ${'' /* margin: 0 auto; */}
+    margin: 0 auto;
     padding: 2rem;
   }
 `;
